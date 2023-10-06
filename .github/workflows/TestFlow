@@ -1,0 +1,26 @@
+name: Test Flow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: test
+        run: echo "Test test"
+        shell: bash
+
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test2
+        run: echo "test2"
+        shell: bash
