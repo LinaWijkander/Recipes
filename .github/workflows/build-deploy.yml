@@ -15,18 +15,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Installing Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '20.x'
 
-      - name: Installing packages
-        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Installing dependencies
+        run: yarn --frozen-lockfile
 
       - name: Building project
-        run: yarn run build
+        run: yarn run build --if-present
 
       - name: Running tests
         run: yarn run test
