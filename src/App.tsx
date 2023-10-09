@@ -6,8 +6,8 @@ import Plan from "./components/pages/plan";
 import Home from "./components/pages/home";
 
 //<Route path="/" element={<Home />} />
-function App() {
 
+function App() {
   return (
     <>
         <Routes>
