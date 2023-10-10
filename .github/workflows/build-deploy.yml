@@ -32,8 +32,8 @@ jobs:
       - name: Uploading production-ready build files
         uses: actions/upload-artifact@v3
         with:
-          name: build-artifact
-          path: ./build
+          name: Build
+          path: dist
           if-no-files-found: error
 
   deploy:
@@ -46,11 +46,11 @@ jobs:
       - name: Downloading artifact
         uses: actions/download-artifact@v3
         with:
-          name: production-files
-          path: ./build
+          name: Build
+          path: dist
 
       - name: Deploying to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: dist
