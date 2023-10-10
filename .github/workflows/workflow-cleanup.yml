@@ -6,7 +6,7 @@ on:
 jobs:
   cleanup:
     name: Clean up
-    runs-on: self-hosted
+    runs-on: macos-latest
     timeout-minutes: 3
     steps:
       - name: Delete workflow runs
