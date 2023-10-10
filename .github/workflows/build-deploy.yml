@@ -40,17 +40,24 @@ jobs:
     name: Deploy
     needs: build1
     runs-on: macos-latest
-    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
 
     steps:
       - name: Downloading artifact
         uses: actions/download-artifact@v3
         with:
           name: Build
-          path: dist
+          path: Build
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: path/to/artifact
 
       - name: Deploying to gh-pages
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
+          commit_message: ${{ github.event.head_commit.message }}
