@@ -15,7 +15,7 @@ jobs:
       - name: Downloading artifact
         uses: actions/download-artifact@v3
         with:
-          name: production-files
+          name: Build
           path: dist
 
       - name: Deploying to gh-pages
