@@ -4,8 +4,8 @@ on:
   push:
 
 jobs:
-  cleanup:
-    name: Clean up
+  del-flow:
+    name: Delete flows
     runs-on: macos-latest
     permissions:
       actions: write
@@ -16,4 +16,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: LinaWijkander/Recipes
-          older-than-seconds: 604 
+          retain_days: 7
+          keep_minimum_runs: 3
