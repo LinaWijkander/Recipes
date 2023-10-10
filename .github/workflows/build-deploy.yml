@@ -36,7 +36,8 @@ jobs:
           path: dist
           if-no-files-found: error
 
-      - name: Display structure of downloaded files
+      - name: Display structure of uploaded files
+        working-directory: dist
         run: ls -la
 
   deploy:
@@ -54,6 +55,7 @@ jobs:
           path: dist
 
       - name: Display structure of downloaded files
+        working-directory: dist
         run: ls -la
 
       - name: Deploying to gh-pages
@@ -61,5 +63,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: ./public
           commit_message: ${{ github.event.head_commit.message }}
