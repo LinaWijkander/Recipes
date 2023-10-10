@@ -48,7 +48,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Build
-          path: Build
+          path: dist
 
       - name: Display structure of downloaded files
         run: ls -R
