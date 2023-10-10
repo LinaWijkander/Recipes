@@ -36,6 +36,9 @@ jobs:
           path: dist
           if-no-files-found: error
 
+      - name: Display structure of downloaded files
+        run: ls -la
+
   deploy:
     name: Deploy
     needs: build1
