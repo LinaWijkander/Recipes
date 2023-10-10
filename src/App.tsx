@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.css';
 import {Route, Routes} from "react-router-dom";
 import Smoothies from "./components/pages/smoothies";
 import Plan from "./components/pages/plan";
