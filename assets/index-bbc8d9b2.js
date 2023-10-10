@@ -116,4 +116,4 @@ Error generating stack: `+o.message+`
   ${({active:e})=>e&&`
     background-color: #555;
   `}
-`,Ua=({to:e,children:t,...n})=>{const r=ls(e),l=Om({path:r.pathname,end:!0});return j.jsx(w0,{active:l,children:j.jsx(Ld,{to:e,...n,children:t})})};function S0(){return j.jsx(h0,{children:j.jsxs(m0,{children:[j.jsx(y0,{href:"/",className:"home",children:"Home"}),j.jsxs(v0,{children:[j.jsx(Ua,{to:"/smoothies",children:"Smoothies"}),j.jsx(Ua,{to:"/plan",children:"Plan"})]})]})})}li.createRoot(document.getElementById("root")).render(j.jsx(Jt.StrictMode,{children:j.jsxs(ev,{children:[j.jsx(S0,{}),j.jsx(cv,{})]})}));
+`,Ua=({to:e,children:t,...n})=>{const r=ls(e),l=Om({path:r.pathname,end:!0});return j.jsx(w0,{active:l,children:j.jsx(Ld,{to:e,...n,children:t})})};function S0(){return j.jsx(h0,{children:j.jsxs(m0,{children:[j.jsx(y0,{href:"/",className:"home",children:"Home"}),j.jsxs(v0,{children:[j.jsx(Ua,{to:"/smoothies",children:"Smoothies"}),j.jsx(Ua,{to:"/plan",children:"Plan"})]})]})})}li.createRoot(document.getElementById("root")).render(j.jsxs(Jt.StrictMode,{children:[j.jsx("div",{children:"Index"}),j.jsxs(ev,{children:[j.jsx(S0,{}),j.jsx(cv,{})]})]}));
