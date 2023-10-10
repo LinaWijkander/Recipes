@@ -44,7 +44,14 @@ jobs:
       contents: write
 
     steps:
+      - name: Check if there are any changes
+        id: verify_diff
+        run: |
+          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
+    
       - name: Downloading artifact
+        if: steps.verify_diff.outputs.changed == 'true'
         uses: actions/download-artifact@v3
         with:
           name: Build
