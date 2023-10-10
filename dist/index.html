@@ -13,24 +13,3 @@
     
   </body>
 </html>
-
-name: Delete workflow runs
-
-on:
-push:
-
-
-jobs:
-cleanup:
-name: Clean up
-runs-on: self-hosted
-timeout-minutes: 3
-
-steps:
-- name: Delete workflow runs
-uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
-with:
-repository: LinaWijkander/Recipes
-older-than-seconds: 604800 #7 days in seconds
-env:
-GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
