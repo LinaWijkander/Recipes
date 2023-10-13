@@ -1,22 +1,27 @@
+// can use react query instead of this new router
 
 import './App.css';
-import {Route, Routes} from "react-router-dom";
-import Smoothies from "./components/pages/smoothies";
-import Plan from "./components/pages/plan";
-import Home from "./components/pages/home";
+import { Outlet} from "react-router-dom";
+import {Navbar} from "./components/organisms/Navbar";
 
-//<Route index element={<Home />} />
-
+ 
 function App() {
-  return (
+    
+    return (
     <>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/smoothies" element={<Smoothies />} />
-            <Route path="/plan" element={<Plan />} />
-        </Routes>
+       <Navbar/>
+        <Outlet/>
     </>
-  )
+  );
 }
+export default App;
 
-export default App
+
+
+/*
+ <Routes>
+     <Route path="/" element={<Home />} />
+     <Route path="/smoothies" element={<Smoothies />} />
+     <Route path="/plan" element={<Plan />} />
+  </Routes>
+ */

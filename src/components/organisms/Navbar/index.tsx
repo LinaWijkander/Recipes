@@ -3,7 +3,11 @@ import {StyledListI} from "./styles";
 import { useMatch, useResolvedPath } from "react-router-dom";
 
 // separera till separata components
-
+// have image link to home:
+/*<Link to="/">
+    <img src={logo} alt=""/>
+    </Link>
+ */
 export interface LinkProps {
     to: string,
     children: string,
@@ -27,10 +31,10 @@ export function Navbar() {
     return (
         <S.StyledContainer>
         <S.StyledNavbar>
-            <S.StyledTitle href={"/"} className={"home"}>Home</S.StyledTitle>
+            <S.StyledTitle href={"/"}>Home</S.StyledTitle>
             <S.StyledUList>
-                <CustomLink to={"/smoothies"}>Smoothies</CustomLink>
-                <CustomLink to={"/plan"}>Plan</CustomLink>
+                <CustomLink to={"/recipes/smoothies"}>Smoothies</CustomLink>
+                <CustomLink to={"/recipes/plan"}>Plan</CustomLink>
             </S.StyledUList>
         </S.StyledNavbar>
         </S.StyledContainer>
