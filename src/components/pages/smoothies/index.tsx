@@ -1,14 +1,26 @@
-import reactLogo from '../../../assets/react.svg';
+import {ContentContainer} from "../../styles/genericContainers";
+import {useLoaderData} from "react-router-dom";
+import RouterLink from "../../atoms/routerLink";
+import RecipeCard from "../../molecules/recipeCard";
+
+ 
+export const recipeLoader = async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/photos");
+    return response.json();
+}
 
 const Smoothies = () => {
+    const recipes = useLoaderData() as any;
+    
     return (
-        <div>Smoothies
-            <div>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-        </div>
+        <ContentContainer>
+            {recipes.map((recipes : any) => (
+                <RouterLink to={"/"} key={recipes.id}>
+                <RecipeCard title={recipes.title} image={recipes.url}/>
+                </RouterLink>
+                
+            ))}
+        </ContentContainer>
     )
 }
 export default Smoothies

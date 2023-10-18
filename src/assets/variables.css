@@ -1,0 +1,23 @@
+:root {
+    /**** Colors ****/
+    --grey01: #555;
+    --grey02:  #777;
+    --testing: #DBBEBB;
+    --black: #191B36;
+    --white: #FFFFFF;
+    --parchment: #FCF5E5;
+
+    /**** Container Sizes ****/
+    --contentContainerWidth: 500px;
+    --contentContainerHeight: 800px;
+    --recipeCardWidth: 500px;
+    --recipeCardHeight: 200px;
+
+    /**** Image Sizes ****/
+    --imageWidth_S: 100px;
+    --imageHeight_S: 100px;
+    --imageWidth_M: 200px;
+    --imageHeight_M: 200px;
+    --imageWidth_L: 500px;
+    --imageHeight_L: 500px;
+}
