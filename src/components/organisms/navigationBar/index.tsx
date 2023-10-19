@@ -22,7 +22,7 @@ const CustomLink = ({to, children, ...props} : LinkProps) => {
 }
 
 
-export const Navbar = () => {
+export const NavigationBar = () => {
     return (
         <S.StyledNavbar>
             <S.StyledTitle href={"/"}>Home</S.StyledTitle>

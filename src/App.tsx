@@ -2,14 +2,15 @@
 import { Outlet} from "react-router-dom";
 import './assets/variables.css'
 import {GlobalStyle, PageContainer} from "./components/styles/genericContainers";
-import {Navbar as BestNavbar} from "./components/organisms/navbar";
+import {NavigationBar} from "./components/organisms/navigationBar";
+
 
 
 function App() {
     return (
     <PageContainer>
         <GlobalStyle />
-       <BestNavbar/>
+       <NavigationBar/>
         <Outlet/>
     </PageContainer>
   );
