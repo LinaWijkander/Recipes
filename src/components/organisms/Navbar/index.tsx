@@ -1,6 +1,7 @@
 import * as S from './styles';
 import {PathMatch, useMatch, useResolvedPath} from "react-router-dom";
 
+
 export interface LinkProps {
     to: string,
     children: string,
@@ -20,10 +21,9 @@ const CustomLink = ({to, children, ...props} : LinkProps) => {
     )
 }
 
-export function Navbar() {
+
+export const Navbar = () => {
     return (
-        //<S.StyledContainer>
-        
         <S.StyledNavbar>
             <S.StyledTitle href={"/"}>Home</S.StyledTitle>
             <S.StyledUList>
@@ -31,6 +31,5 @@ export function Navbar() {
                 <CustomLink to={"/recipes/plan"}>Plan</CustomLink>
             </S.StyledUList>
         </S.StyledNavbar>
-        //</S.StyledContainer>
     )
 }
