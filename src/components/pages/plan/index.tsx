@@ -2,11 +2,7 @@ import {useLoaderData, useNavigation} from "react-router-dom";
 import {ContentContainer} from "../../styles/genericContainers";
 import Image from "../../atoms/image";
 
-export const dogLoader = async () => {
-    const response = await fetch("https://random.dog/woof.json");
-    const dog = await response.json();
-    return dog.url;
-}
+
 
 export const Plan = () => {
     const dogUrl = useLoaderData() as string;
