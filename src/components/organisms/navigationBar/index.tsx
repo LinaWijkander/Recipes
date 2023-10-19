@@ -25,7 +25,7 @@ const CustomLink = ({to, children, ...props} : LinkProps) => {
 export const NavigationBar = () => {
     return (
         <S.StyledNavbar>
-            <S.StyledTitle href={"/"}>Home</S.StyledTitle>
+            <S.StyledTitle href={"/recipes"}>Home</S.StyledTitle>
             <S.StyledUList>
                 <CustomLink to={"/recipes/smoothies"}>Smoothies</CustomLink>
                 <CustomLink to={"/recipes/plan"}>Plan</CustomLink>
