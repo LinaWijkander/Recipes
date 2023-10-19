@@ -1,10 +1,10 @@
 import * as S from './styles';
-import { useMatch, useResolvedPath } from "react-router-dom";
+import {PathMatch, useMatch, useResolvedPath} from "react-router-dom";
 
 export interface LinkProps {
     to: string,
     children: string,
-    active?: any,
+    active?: PathMatch | null,
 }
 
 const CustomLink = ({to, children, ...props} : LinkProps) => {
