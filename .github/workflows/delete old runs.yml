@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 3
     steps:    
       - name: Delete old workflow runs
-        uses: MajorScruffy/delete-old-workflow-runs@v0.2.0
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
         with:
           repository: ${{ github.repository }}                      
           older-than-seconds: 300 
