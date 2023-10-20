@@ -1,5 +1,8 @@
+name: Delete old workflows
+
 on:
   push:
+  workflow_dispatch:
   
 concurrency:
   group: "${{ github.ref }}_cleanup_old"
@@ -17,6 +20,6 @@ jobs:
         uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
         with:
           repository: ${{ github.repository }}                      
-          older-than-seconds: 300 
+          older-than-seconds: 604800 #7 days in seconds
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
