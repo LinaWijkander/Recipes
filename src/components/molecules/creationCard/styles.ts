@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const StyledRecipeCard = styled.div`
+export const StyledCreationCard = styled.div`
   display: flex;
   flex-direction: row;
   padding: 2rem;

@@ -1,10 +1,16 @@
 import {useLoaderData, useNavigation} from "react-router-dom";
 import {ContentContainer} from "../../styles/genericContainers";
 import Image from "../../atoms/image";
+import Button from "../../atoms/button"
+
+const handleClick = () => {
+    alert('Button clicked!');
+};
 
 
 
-export const Plan = () => {
+
+export const Crochet = () => {
     const dogUrl = useLoaderData() as string;
     const navigation = useNavigation();
     
@@ -16,6 +22,7 @@ export const Plan = () => {
         <ContentContainer>
             {" "}
             <Image size={"large"} src={dogUrl} alt={"a random dog picture"}/>
+            <Button text={"Click Me"} onClick={handleClick}/>
             {" "}
         </ContentContainer>
     )

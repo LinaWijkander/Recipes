@@ -1,19 +1,19 @@
-import {StyledRecipeCard} from './styles';
+import {StyledCreationCard} from './styles';
 import reactLogo from '../../../assets/react.svg';
 import Image from "../../atoms/image";
 import Title from "../../atoms/title";
 
 interface RecipeCardProps {
     title: string,
-    image: string
+    image: string;
 }
 
-const RecipeCard = ({title="Recipe Card", image=reactLogo} : RecipeCardProps) => {
+const CreationCard = ({title="Recipe Card", image=reactLogo} : RecipeCardProps) => {
     return (
-        <StyledRecipeCard>
+        <StyledCreationCard>
            <Image size={"medium"} src={image}  alt=""/>
            <Title size={"h1"} text={title}/>
-        </StyledRecipeCard>
+        </StyledCreationCard>
     )
 }
-export default RecipeCard
+export default CreationCard

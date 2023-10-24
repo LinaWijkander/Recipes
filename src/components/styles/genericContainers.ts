@@ -9,8 +9,25 @@ export const GlobalStyle = createGlobalStyle`
 `
 export const PageContainer = styled.div`
   width: 100%;
-  background-color: var(--parchment);
   
+`
+
+export const ScalableContainer = styled.div`
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
+  height: 100vh; /* Ensure the container takes the full viewport height */
+  display:flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  background-color: var(--parchment);
+
 `
 
 export const ContentContainer = styled.div`

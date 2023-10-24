@@ -1,18 +1,18 @@
 import {createBrowserRouter} from "react-router-dom";
 import App from "../App";
 import Home from "../components/pages/home";
-import {dogLoader, recipeLoader} from "../loaders/loaders";
-import Smoothies from "../components/pages/smoothies";
-import {Plan} from "../components/pages/plan";
+import {dogLoader, creationLoader} from "../loaders/loaders";
+import Crafters from "../components/pages/crafters";
+import {Crochet} from "../components/pages/crochet";
 
 export const router = createBrowserRouter(
     [{
         path: "/",
         element: <App/>,
         children: [
-            {path: "/recipes", element: <Home/>},
-            {path: "/recipes/smoothies", element: <Smoothies/>, loader: recipeLoader},
-            {path: "/recipes/plan", element: <Plan/>, loader: dogLoader},
+            {path: "/wst-crafts", element: <Home/>, loader: creationLoader},
+            {path: "/wst-crafts/crafters", element: <Crafters/>, loader: creationLoader},
+            {path: "/wst-crafts/crochet", element: <Crochet/>, loader: dogLoader},
         ]
     }
     ]
