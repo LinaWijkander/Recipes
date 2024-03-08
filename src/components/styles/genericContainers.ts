@@ -52,7 +52,7 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   //width: 70%; /*var(--contentContainerWidth);*/
-  height: var(--contentContainerHeight);
+  //height: var(--contentContainerHeight);
   margin: 1.5rem;
   gap: 0.5rem;
 `
