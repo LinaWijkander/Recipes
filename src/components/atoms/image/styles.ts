@@ -21,4 +21,8 @@ export const LargeImage = styled(StyledImage)`
   height: var(--imageHeight_L);
 `
 
-
+// Find some nice solution to scaling, aspect ratio fittings..
+export const Fitted = styled(StyledImage)`
+  //width: var(--imageWidth_S);
+  //aspectRatio: 3/2;
+`

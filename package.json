@@ -1,5 +1,5 @@
 {
-  "name": "recipes",
+  "name": "crafts",
   "homepage": "https://linawijkander.github.io/wst-crafts",
   "private": true,
   "version": "0.0.0",
@@ -14,6 +14,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.438.0",
+    "@aws-sdk/lib-dynamodb": "^3.438.0",
+    "@types/aws-sdk": "^2.7.0",
+    "aws-sdk": "^2.1489.0",
+    "axios": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
