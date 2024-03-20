@@ -6,9 +6,11 @@ interface RouterLinkProps {
 }
 
 
-const RouterLink = ({children, to="/"}: RouterLinkProps) => {
+const RouterLink = ({children, to="/", }: RouterLinkProps) => {
     return (
-        <S.StyledLink to={to}>{children}</S.StyledLink>
+        <S.StyledLink to={to}>
+            {children}
+        </S.StyledLink>
     )
 }
 

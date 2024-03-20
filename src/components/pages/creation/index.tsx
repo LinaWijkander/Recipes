@@ -1,8 +1,9 @@
-import {useLoaderData} from "react-router-dom";
-import {creationLoader, LoaderData} from "../../../loaders/loaders";
+import { useLoaderData} from "react-router-dom";
+//import CreationCard from "../../molecules/creationCard";
+import {ContentContainer, PageContainer} from "../../styles/genericContainers.ts";
+import Image from "../../atoms/image";
 
-
-
+// in creation card instead?
 export type CreationType = {
     creation_type: string
     id?: string
@@ -12,15 +13,21 @@ export type CreationType = {
     image_link: string
 }
 
+
+// Detailed view when clicking a card in the creation list
 const Creation = () => {
-    const creation = useLoaderData() as LoaderData<typeof creationLoader>;
+    const creation = useLoaderData() as CreationType;
+    
     
     return (
-        <div>
-            <h1>
-                {creation.id} - {creation.title}
-            </h1>
-        </div>
+        <PageContainer>
+            <ContentContainer>
+                <Image size={"XL"} alt={""} src={creation.image_link}/>
+                {/*<CreationCard title={creation.title} image={creation.image_link} type={creation.creation_type}
+                          creator={creation.creator}/>*/}
+            </ContentContainer>
+        </PageContainer>
     )
 }
+
 export default Creation

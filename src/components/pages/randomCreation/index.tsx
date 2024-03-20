@@ -4,8 +4,6 @@ import {Await, defer, useLoaderData} from "react-router-dom";
 import {Suspense} from "react";
 
 
-// Ha en sida med crafts ist- Som bara fyller med olika content beroende på vad man tryckte
-// el länk för varje kopplad till samma sida men med unik loader. Måste ha endpoints för varje creation type då
 
 export const postLoader = async ({ params }:any) => {
     const postId = params.postId;

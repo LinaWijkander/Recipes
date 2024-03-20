@@ -1,7 +1,7 @@
 import * as S from './styles';
 
 export interface ImageProps {
-    size: "small" | "medium" | "large" | "fitted",
+    size: "small" | "medium" | "large" | "fitted" | "XL",
     alt: string,
     src: string
 }
@@ -10,7 +10,10 @@ const ImageTypes = {
     small: S.SmallImage,
     medium: S.MediumImage,
     large: S.LargeImage,
+    XL: S.XLImage,
     fitted: S.Fitted,
+    
+   
 }
 
 const Image = ({size = "medium", alt="", src}:ImageProps) => {

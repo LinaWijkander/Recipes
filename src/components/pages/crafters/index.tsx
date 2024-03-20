@@ -2,13 +2,9 @@
 
 
 
-const Crafters = () => {
- 
-    
+export const Crafters = () => {
+
     return (
-        <div>
-            Crafters
-        </div>
+        <h1>Crafters</h1>
     )
 }
-export default Crafters
