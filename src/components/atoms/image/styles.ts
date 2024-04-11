@@ -26,8 +26,9 @@ export const XLImage = styled(StyledImage)`
   height: 50%;
 `
 
-// Find some nice solution to scaling, aspect ratio fittings..
 export const Fitted = styled(StyledImage)`
-  //width: var(--imageWidth_S);
-  //aspectRatio: 3/2;
+  width: 130px;
+  height: 150px;
+  //object-fit: contain;
+  object-fit: cover;
 `

@@ -10,8 +10,8 @@
     /**** Container Sizes ****/
     --contentContainerWidth: 500px;
     --contentContainerHeight: 800px;
-    --recipeCardWidth: 500px;
-    --recipeCardHeight: 200px;
+    --recipeCardWidth: 320px;
+    --recipeCardHeight: 150px;
 
     /**** Image Sizes ****/
     --imageWidth_S: 100px;

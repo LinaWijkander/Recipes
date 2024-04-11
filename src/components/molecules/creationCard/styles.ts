@@ -9,8 +9,8 @@ export const StyledCreationCard = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   cursor: pointer;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 1.2rem;
+  gap: 1.2rem;
   justify-content: flex-start;
   width: var(--recipeCardWidth);
   height: var(--recipeCardHeight);
@@ -22,6 +22,8 @@ export const StyledCreationCard = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
+  text-align: left;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
 `

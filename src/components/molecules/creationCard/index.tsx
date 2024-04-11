@@ -18,7 +18,7 @@ const CreationCard = (props:CreationCardProps) => {
         <S.StyledCreationCard /*onClick={onClick}*/>
             <Image size={"fitted"} src={props.image}  alt=""/>
             <S.TextContainer>
-                <Title size={"h1"} text={props.title}/>
+                <Title size={"h2"} text={props.title}/>
                 {/*<Paragraph size={"p1"} text={props.type}/>*/}
                 <Paragraph size={"p1"} text={props.creator}/>
             </S.TextContainer>
