@@ -40,7 +40,7 @@ const Creations = () => {
                 <FlexContainer>
                     {creationList.map((creation: CreationType) => (
                         /*<RouterLink to={`/wst-crafts/creations/${creation.id}`} key={creation.id}>*/
-                        <RouterLink to={`/wst-crafts/creations/${creation.id}`} key={creation.id}>
+                        <RouterLink to={`/wst-creations/creations/${creation.id}`} key={creation.id}>
                             <CreationCard title={creation.title} image={creation.image_link}
                                           type={creation.creation_type} creator={"By " + creation.creator}/>
                         </RouterLink>

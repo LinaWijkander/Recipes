@@ -27,11 +27,11 @@ const CustomLink = ({to, children, dataPath,...props} : LinkProps) => {
 export const NavigationBar = () => {
     return (
         <S.StyledNavbar>
-            <S.StyledTitle href={"/wst-crafts/"} >Home</S.StyledTitle>
+            <S.StyledTitle href={"/wst-creations/"}>Home</S.StyledTitle>
             <S.StyledUList>
-                <CustomLink to={"/wst-crafts/crafters"} dataPath={"crafters"}>Crafters</CustomLink>
-                <CustomLink to={"/wst-crafts/crochet"} dataPath={"crochet"}>Crochet</CustomLink>
-                <CustomLink to={"/wst-crafts/creations"} dataPath={"creations"}>Creations</CustomLink>
+                <CustomLink to={"/wst-creations/crafters"} dataPath={"crafters"}>Crafters</CustomLink>
+                <CustomLink to={"/wst-creations/crochet"} dataPath={"crochet"}>Crochet</CustomLink>
+                <CustomLink to={"/wst-creations/creations"} dataPath={"creations"}>Creations</CustomLink>
             </S.StyledUList>
         </S.StyledNavbar>
     )
