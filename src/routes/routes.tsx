@@ -16,13 +16,13 @@ export const router = createBrowserRouter(
         path: "/",
         element: <App/>,
         children: [
-            {path: "/wst-creations", element: </*Home*/Creations/>},
-            {path: "/wst-creations/creations", element: <Creations/>, /*loader: tableLoader*/},
-            {path: "/wst-creations/creations/:creationId", element: <Creation/>, loader:  ({params}) => {return creationLoader(params.creationId)}},
-            {path: "/wst-creations/crafters", element: <Crafters/>},
-            {path: "/wst-creations/crochet", element: <Crochet/>},
-            {path: "/wst-creations/post/:postId", element: <RandomCreation/>, loader: postLoader},
-            {path: "/wst-creations/addCreation", element: <AddCreation/>},
+            {path: "/", element: </*Home*/Creations/>},
+            {path: "/creations", element: <Creations/>, /*loader: tableLoader*/},
+            {path: "/creations/:creationId", element: <Creation/>, loader:  ({params}) => {return creationLoader(params.creationId)}},
+            {path: "/crafters", element: <Crafters/>},
+            {path: "/crochet", element: <Crochet/>},
+            {path: "/post/:postId", element: <RandomCreation/>, loader: postLoader},
+            {path: "/addCreation", element: <AddCreation/>},
         ]
     }
     ]
