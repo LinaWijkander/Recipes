@@ -1,37 +1,27 @@
 import * as S from './styles';
-import { PathMatch, useMatch, useResolvedPath} from "react-router-dom";
+import MenuDropdown from "../../molecules/MenuDropdown";
+import {useState} from "react";
+import {CustomLink} from "../../atoms/routerLink";
 
 
-export interface LinkProps {
-    to: string,
-    children: string,
-    active?: PathMatch | null,
-    dataPath: string,
-}
 
-const CustomLink = ({to, children, dataPath,...props} : LinkProps) => {
-    const resolvedPath = useResolvedPath(to);
-    const isActive = useMatch({path: resolvedPath.pathname, end:true}) // match exact path, otherwise relative
-  
-    return(
-        <S.StyledListI active={isActive}>
-            <S.StyledLink to={to} {...props} state={{wantedData: {dataPath} }} preventScrollReset={true}>
-                {children}
-            </S.StyledLink>
-        </S.StyledListI>
-    )
-}
-
-//preventScrollReset={true}
+//todo kolla över routerLink och customLink components. Can they be merged?
+// instead have a Navbar Item component you can style to take up 100& of parent height & that holds a routerLink
 
 export const NavigationBar = () => {
+    const [openMenuDropdown, setOpenMenuDropdown] = useState(false);
+    
     return (
         <S.StyledNavbar>
-            <S.StyledTitle href={"/"}>Home</S.StyledTitle>
+            {/*"/" istf home när satt upp en faktisk hemsida*/}
+            <S.StyledTitle href={"/home"}>Home</S.StyledTitle> 
             <S.StyledUList>
+                {openMenuDropdown && <MenuDropdown/>}
+               
                 <CustomLink to={"/crafters"} dataPath={"crafters"}>Crafters</CustomLink>
-                <CustomLink to={"/crochet"} dataPath={"crochet"}>Crochet</CustomLink>
-                <CustomLink to={"/creations"} dataPath={"creations"}>Creations</CustomLink>
+                <CustomLink to={"/about"} dataPath={"about"}>About</CustomLink>
+                <S.StyledDropdown onClick={()=>setOpenMenuDropdown((prev)=> !prev)}>Creations</S.StyledDropdown>
+                
             </S.StyledUList>
         </S.StyledNavbar>
     )

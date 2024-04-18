@@ -12,8 +12,8 @@ export const StyledCreationCard = styled.div`
   padding: 1.2rem;
   gap: 1.2rem;
   justify-content: flex-start;
-  width: var(--recipeCardWidth);
-  height: var(--recipeCardHeight);
+  width: var(--creationCardWidth);
+  height: var(--creationCardHeight);
   background-color: var(--white);
 
   &:hover {

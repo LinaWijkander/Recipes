@@ -1,7 +1,7 @@
-import {ContentContainer, FlexContainer, PageContainer} from "../../styles/genericContainers";
+import {ContentContainer, GridContainer, PageContainer} from "../../styles/genericContainers";
 import { useNavigation} from 'react-router-dom';
 import Title from "../../atoms/title";
-import RouterLink from "../../atoms/routerLink";
+import {RouterLink} from "../../atoms/routerLink";
 import CreationCard from "../../molecules/creationCard";
 import {CreationType} from "../creation";
 import {useEffect, useState} from "react";
@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 
-const Creations = () => {
+const Ceramics = () => {
 
     //const creations = useLoaderData() as LoaderData<typeof tableLoader>; // hade dataloader och det funkade lika bra....
     //const creations = useLoaderData() as CreationType[];
@@ -23,10 +23,10 @@ const Creations = () => {
             .then(response => {
                 setCreationList(response.data)
             })
-        console.log(creationList)
     }, [])
-    
-    
+
+    const creations: CreationType[] = creationList.filter((item: CreationType) => item.creation_type === "Ceramics");
+
     const navigation = useNavigation();
 
     if (navigation.state === "loading") {
@@ -37,17 +37,17 @@ const Creations = () => {
     return (
         <PageContainer>
             <ContentContainer>
-                <FlexContainer>
-                    {creationList.map((creation: CreationType) => (
+                <GridContainer>
+                    {creations.map((creation: CreationType) => (
                         /*<RouterLink to={`/creations/${creation.id}`} key={creation.id}>*/
                         <RouterLink to={`/creations/${creation.id}`} key={creation.id}>
                             <CreationCard title={creation.title} image={creation.image_link}
                                           type={creation.creation_type} creator={"By " + creation.creator}/>
                         </RouterLink>
                     ))}
-                </FlexContainer>
+                </GridContainer>
             </ContentContainer>
         </PageContainer>
     )
 }
-export default Creations
+export default Ceramics
